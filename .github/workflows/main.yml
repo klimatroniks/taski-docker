@@ -11,6 +11,16 @@ jobs:
     # Разворачиваем окружение:
     runs-on: ubuntu-latest
 
+    service:
+      postgres:
+        image: postgres:13.10
+        env:
+          POSTGRES_USER: django_user
+          POSTGRES_PASSWORD: 1234
+          POSTGREES_DB: django_db
+        ports:
+          - 5432:5432
+        options: --health-cmd pg_iready --health-interval 10s --health-timeout-terties 5
     steps:
     # Копируем код проекта
     - name: Check out code
