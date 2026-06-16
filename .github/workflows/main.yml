@@ -128,7 +128,7 @@ jobs:
           tags: klimatroniks/taski_gateway:latest
   deploy:
     runs-on: ubuntu_latest
-    nees:
+    needs:
       - build_and_push_to_docker_hub
       - build_frontend_and_push_to_docker_hub
       - build_gateway_and_push_to_docker_hub
