@@ -70,7 +70,7 @@ jobs:
           context: ./backend/
           push: true
           tags: klimatroniks/taski_backend:latest
-  frontend-tests:
+  frontend_tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repo
