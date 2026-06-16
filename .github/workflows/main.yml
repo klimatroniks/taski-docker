@@ -76,7 +76,7 @@ jobs:
       - name: Checkout the repo
         uses: actions/checkout@v3
       - name: Set up nodeJS
-        uses: docker/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: 18
       - name: Install dependencies
